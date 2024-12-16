@@ -75,11 +75,6 @@ export default function Home() {
     }
   }
 
-  {
-    markets.map((item) => {
-      console.log("🚀 ~ Home ~ markets - latitude:", item.latitude);
-    });
-  }
   useEffect(() => {
     getCurrentLocation();
     fetchCategories();
@@ -113,7 +108,7 @@ export default function Home() {
 
   setTimeout(() => {
     if (!isMapReady) {
-      console.warn("Map is not ready, triggering fallback");
+      // console.warn("Map is not ready, triggering fallback");
       setMapKey(1 + 1);
     }
   }, 5000); // 5 segundos
